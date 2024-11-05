@@ -10,10 +10,12 @@ import SwiftUI
 
 struct MainIndicator: View {
     var body: some View {
-        Image(systemName: "cloud.sun.fill")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 260)
+        HStack {
+            Image(systemName: "cloud.sun.fill")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 260)
+        }
     }
 }
 

@@ -9,21 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            let azulGoo = Color(red: 58 / 255, green: 94 / 255, blue: 152 / 255)
-            
+        ScrollView {
             VStack {
+                let azulGoo = Color(red: 58 / 255, green: 94 / 255, blue: 152 / 255)
                 
-                MainIndicator()
-                CoreIndicators()
-                ForecastIndicators()
-                
+                VStack {
+                    
+                    MainIndicator()
+                    CoreIndicators()
+                    ForecastIndicators()
+                    
+                }
+                // .foregroundStyle(.indigo.gradient)
+                .foregroundStyle(Color(azulGoo))
+                .padding()
             }
-            // .foregroundStyle(.indigo.gradient)
-            .foregroundStyle(Color(azulGoo))
             .padding()
         }
-        .padding()
     }
 }
 
